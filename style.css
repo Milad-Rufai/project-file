@@ -40,7 +40,7 @@ p {
   color: black;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   text-align: center;
 }
 
@@ -319,7 +319,7 @@ top: 0;
   color: #000;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   text-align: center;
 }
 
@@ -413,10 +413,12 @@ top: 0;
   gap: 10px;
 }
 
-.tool{
+.tool-body img {
   height: 50%;
   width: 50%;
+  object-fit:none;
 }
+
 
 /* Project Section */
 
