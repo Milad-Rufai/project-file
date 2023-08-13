@@ -394,7 +394,11 @@ background-image: linear-gradient(-900deg, #0000 8%, #1b2c62 10%);
   line-height: 1.9rem;
 }
 
-
+.brand-tool h1{
+  color: blueviolet;
+  margin-top: 5px;
+  font-size: xx-large;
+}
 
 /* Project Section */
 
