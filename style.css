@@ -907,3 +907,47 @@ filter: grayscale(1);
 
 /* End of media query for desktop */
 
+
+
+
+
+
+
+.maintenance-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.maintenance-content {
+  text-align: center;
+  background: greenyellow;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .maintenance-content {
+      max-width: 90%;
+  }
+  h1 {
+      font-size: 20px;
+  }
+  p {
+      font-size: 16px;
+  }
+}
