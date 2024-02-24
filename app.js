@@ -23,3 +23,49 @@ menu_item.forEach((item) => {
         mobile_menu.classList.toggle('active');
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillBars = document.querySelectorAll('.skill-bar');
+  
+    skillBars.forEach(skillBar => {
+      const skillProgress = skillBar.querySelector('.skill-progress');
+      const initialWidth = skillProgress.style.width;
+      const skillName = skillBar.parentElement.querySelector('.skill-name').textContent;
+  
+      skillBar.addEventListener('mouseenter', function() {
+        skillProgress.textContent = `${skillName}: ${initialWidth}`;
+      });
+  
+      skillBar.addEventListener('mouseleave', function() {
+        skillProgress.textContent = '';
+      });
+    });
+  
+    // Intersection Observer for filler animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          fillSkillBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    const section = document.querySelector('.skills-section');
+    observer.observe(section);
+  
+    function fillSkillBars() {
+      skillBars.forEach(skillBar => {
+        const skillProgress = skillBar.querySelector('.skill-progress');
+        const initialWidth = skillProgress.style.width;
+  
+        skillProgress.style.width = initialWidth;
+        skillProgress.style.transition = 'width 1.5s ease-in-out'; // Adjust animation duration as needed
+      });
+    }
+  });
+  
+  
