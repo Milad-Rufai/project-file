@@ -233,7 +233,7 @@ top: 0;
 /* Hero section */
 #hero {
   background-image: url(#);
-  background-color: #fff;
+  background-color: #000;
   background-size: cover;
   background-position: top center;
   position: relative;
